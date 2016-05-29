@@ -5,7 +5,6 @@ def secs_to_wait(reset):
 
     reset -- UTC epoch seconds. This is converted into an integer value
     """
-    # floor seconds in double to get a conservative result.
-    reset = int(reset)
+    # floor  time() to get a conservative result.
     now = int(time() - 1)
-    return max(reset - now, 0)
+    return max(int(reset) - now, 0)
