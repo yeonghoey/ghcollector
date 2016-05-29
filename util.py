@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from time import time
 
 def secs_to_wait(reset):
