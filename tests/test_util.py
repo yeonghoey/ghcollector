@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from time import time
-from util import secs_to_wait
+from ghcollector.util import secs_to_wait
 
 def test_secs_to_wait():
     def test(dt):
