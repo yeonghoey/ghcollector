@@ -37,13 +37,13 @@ it waits for reset when it reaches `rate limit`
 ```
 # These are printed to stderr
 ...
-wait for reset: 469 s remaiting
-wait for reset: 468 s remaiting
-wait for reset: 467 s remaiting
-wait for reset: 466 s remaiting
-wait for reset: 465 s remaiting
-wait for reset: 464 s remaiting
-wait for reset: 463 s remaiting
-wait for reset: 462 s remaiting
+wait for reset: 469s remaining
+wait for reset: 468s remaining
+wait for reset: 467s remaining
+wait for reset: 466s remaining
+wait for reset: 465s remaining
+wait for reset: 464s remaining
+wait for reset: 463s remaining
+wait for reset: 462s remaining
 ...
 ```
