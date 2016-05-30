@@ -11,8 +11,11 @@ GITHUB = 'https://api.github.com'
 def G(uri):
     return '{0}/{1}'.format(GITHUB, uri)
 
-def main(getter):
-    url = G('users?per_page=100')
+def main(getter, since):
+    if since:
+        url = G('users?since=%s&per_page=100' % since)
+    else:
+        url = G('users?per_page=100')
     while True:
         us, url = users(getter, url)
         for u in us:
@@ -70,7 +73,10 @@ def wait(reset):
 
 if __name__ == '__main__':
     token = ''
-    if len(sys.argv) == 2:
+    since = None
+    if len(sys.argv) >= 2:
         token = sys.argv[1]
+    if len(sys.argv) == 3:
+        since = sys.argv[2]
     getter = new_getter(token)
-    main(getter)
+    main(getter, since)
