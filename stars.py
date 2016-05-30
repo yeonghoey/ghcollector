@@ -63,6 +63,7 @@ def wait(reset):
     while True:
         now = int(time.time() - 1)
         secs = max(reset - now, 0)
+        if secs == 0: break
         print('wait for reset: %s s remaiting' % secs, file=sys.stderr)
         time.sleep(1)
 
